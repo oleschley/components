@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif
+        }
+
+        /* Basic Specification */
+        .grid {
+            margin: auto;
+            padding: 1rem 2rem;
+            width: 75vw;
+            background-color: #eaeaea;
+
+            display: grid;
+            grid-template-rows: 1fr 2fr 8fr 1fr;
+            grid-template-columns: 15% repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            grid-template-areas: ". header header header"
+                                 "sbar box_1 box_2 box_3"
+                                 "sbar main main main"
+                                 ". footer footer footer";
+        }
+
+        /* Locating items */
+        header { grid-area: header}
+
+        .sidebar {grid-area: sbar}
+
+        .box_1 {
+            grid-area: box_1;
+            text-align: start;
+            align-self: end;
+            justify-self: start
+        }
+
+        .box_2 {
+            grid-area: box_2;
+            text-align: center;
+            align-self: center;
+        }
+
+        .box_3 {
+            grid-area: box_3;
+            text-align: end;
+            align-self: start;
+            justify-self: end;
+        }
+
+        .content {grid-area: main}
+
+        footer {grid-area: footer}
+
+        /* Styling items */
+        .item {
+            padding: 1rem;
+        }
+
+        .sidebar, .box { background-color: #0aa6fc}
+
+        .content { background-color: #cd0000}
+
+        header, footer {
+            height: 2rem;
+            background-color: #3b3b3b;
+            color: #eaeaea;
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <header class="item">Header</header>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item box box_1">Box 1</div>
+        <div class="item box box_2">Box 2</div>
+        <div class="item box box_3">Box 3</div>
+        <div class="item content">Content</div>
+        <footer class="item">Footer</footer>
+    </div>
+</body>
+
+</html>
