@@ -1,2 +1,2 @@
 # Components
-This repo contains various templates and snippets on `HTML` and `CSS`.
+Contains various snippets and templates for frontend development.
