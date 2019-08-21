@@ -1,0 +1,25 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "description": "frontend utils",
+  "main": "app.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss styles/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleschley/components.git"
+  },
+  "author": "ols",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oleschley/components/issues"
+  },
+  "homepage": "https://github.com/oleschley/components#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
